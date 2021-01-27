@@ -70,6 +70,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.3)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     erubi (1.10.0)
     ffi (1.14.2)
     globalid (0.4.2)
@@ -199,6 +202,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   devise
+  devise_invitable (~> 2.0.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)

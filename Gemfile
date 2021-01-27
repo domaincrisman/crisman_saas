@@ -25,3 +25,4 @@ end
 
 gem 'devise'
 gem 'simple_form'
+gem 'devise_invitable', '~> 2.0.0'
