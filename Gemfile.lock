@@ -56,6 +56,9 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    acts_as_tenant (0.5.0)
+      rails (>= 5.2)
+      request_store (>= 1.0.5)
     bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.5.1)
@@ -143,6 +146,8 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    request_store (1.5.0)
+      rack (>= 1.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -199,6 +204,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  acts_as_tenant
   bootsnap (>= 1.4.2)
   byebug
   devise
