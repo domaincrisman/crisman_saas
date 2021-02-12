@@ -1,8 +1,17 @@
 class TenantsController < ApplicationController
-  before_action :set_tenant, only: %w[ show edit update destroy ]
+  before_action :set_tenant, only: [:show, :edit, :update, :destroy, :switch]
 
   def index
     @tenants = Tenant.all
+  end
+
+  def switch
+    if current_user.tenants.include?(@tenant)
+      current_user.update_attribute(:tenant_id, @tenant.id)
+      redirect_to my_tenants_path, notice: "Switched to tenant: #{current_user.tenant.name}"
+    else
+      redirect_to my_tenants_path, alert: "You are not authorized to access tenant: #{@tenant.name}"
+    end
   end
 
   def my
