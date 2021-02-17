@@ -1,9 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @tenant.name %>
-</p>
-
-<%= link_to 'Edit', edit_tenant_path(@tenant) %> |
-<%= link_to 'Back', tenants_path %>
+<div class="card">
+  <div class="card-header">
+    <h4>
+      <strong>Name:</strong>
+      <%= @tenant.name %>    
+    </h4>
+  </div>
+  <div class="card-body">
+    <%= @tenant.users.compact.join(', ') %>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Edit', edit_tenant_path(@tenant) %> |
+    <%= link_to 'Back', tenants_path %>
+  </div>
+</div> 
