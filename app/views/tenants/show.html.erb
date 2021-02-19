@@ -7,6 +7,10 @@
   </div>
   <div class="card-body">
     <%= @tenant.users.compact.join(', ') %>
+    <br>
+    <strong>Members count:</strong>
+    <%= @tenant.members.count %>
+    <br>
   </div>
   <div class="card-footer">
     <%= link_to 'Edit', edit_tenant_path(@tenant) %> |
