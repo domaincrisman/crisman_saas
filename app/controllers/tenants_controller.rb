@@ -19,7 +19,10 @@ class TenantsController < ApplicationController
     render 'index'
   end
   
+  set_current_tenant_through_filter
+
   def show
+    set_current_tenant(@tenant)
   end
 
   def new
