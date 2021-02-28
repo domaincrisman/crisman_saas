@@ -23,6 +23,7 @@
         <th>Tenant Id</th>
         <th>Tenant</th>
         <th>Invitable</th>
+        <th>Roles</th>
       </tr>
     </thead>
     <tbody>
@@ -46,6 +47,16 @@
                 <%= link_to  "Resend invitation", resend_invitation_user_path(member.user), method: :patch  %>
               <% end %>
             <% end %>
+          </td>
+          <td>
+            <!--
+            <%= member.roles %>
+            <%= member.roles.class %>
+            <%= member.admin? %>
+            <%= member.viewer? %>
+            <%= member.editor? %>
+            -->
+            <%= member.active_roles.join(" ") %>
           </td>
           <td><%= link_to 'Edit', edit_member_path(member) %></td>
           <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
