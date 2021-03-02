@@ -3,21 +3,21 @@
   <div class="container-fluid text-center">
     <div class="row">
       <div class="col-md-4">
-        <%= link_to 'CrisManSaaS', root_path %>
+        <%= link_to 'CrisManSaaS', root_path, class: "#{'active font-weight-bold' if current_page?(root_path)}" %>
         © 
         <%= Time.now.year %>
         <br/>
       </div>
       <div class="col-md-4">
-        <%= link_to 'About', about_path, class: 'ml-3' %>
+        <%= link_to 'About', about_path, class: "#{'active font-weight-bold' if current_page?(about_path)}" %>
         <br/>
-        <%= link_to 'Pricing', pricing_path, class: 'ml-3' %>
+        <%= link_to 'Pricing', pricing_path, class: "#{'active font-weight-bold' if current_page?(pricing_path)}" %>
         <br/>
       </div>
       <div class="col-md-4">
-        <%= link_to 'Terms', terms_path, class: 'ml-3' %>
+        <%= link_to 'Terms', terms_path, class: "#{'active font-weight-bold' if current_page?(terms_path)}" %>
         <br/>
-        <%= link_to 'Privacy', privacy_path, class: 'ml-3' %>
+        <%= link_to 'Privacy', privacy_path, class: "#{'active font-weight-bold' if current_page?(privacy_path)}" %>
         <br/>
       </div>
     </div>
