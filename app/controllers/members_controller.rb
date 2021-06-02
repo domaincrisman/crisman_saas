@@ -4,10 +4,7 @@ class MembersController < ApplicationController
   include SetTenant #set ActsAsTenant.current_tenant
   include RequireTenant #no tenant = no access to entire controller
 
-  before_action :set_current_member
-  def set_current_member
-    @current_member = Member.find_by(user: current_user)
-  end
+  include SetCurrentMember #for role-based authorization
 
   before_action :require_admin, only: [:invite, :edit, :update, :destroy]
   def require_admin
