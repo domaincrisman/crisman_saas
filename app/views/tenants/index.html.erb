@@ -13,6 +13,7 @@
       <tr>
         <th>Id</th>
         <th>Name</th>
+        <th>Plan</th>
         <th>Users</th>
         <th></th>
         <th></th>
@@ -30,6 +31,9 @@
           </td>
           <td>
             <%= tenant.name %>
+          </td>
+          <td>
+            <%= tenant.plan %>
           </td>
           <td>
             <%= tenant.users.compact.join(', ') %>
