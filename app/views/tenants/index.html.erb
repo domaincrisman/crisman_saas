@@ -12,6 +12,7 @@
     <thead>
       <tr>
         <th>Id</th>
+        <th>Logo</th>
         <th>Name</th>
         <th>Plan</th>
         <th>Users</th>
@@ -27,6 +28,11 @@
               <%= link_to tenant.id, tenant %>
             <% else %>
               <%= tenant.id %>
+            <% end %>
+          </td>
+          <td>
+          <% if tenant.logo.attached? %>
+              <%= image_tag tenant.logo, height: "20" %>
             <% end %>
           </td>
           <td>

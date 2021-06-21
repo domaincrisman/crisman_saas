@@ -95,6 +95,6 @@ class TenantsController < ApplicationController
     end
 
     def tenant_params
-      params.require(:tenant).permit(:name, :plan)
+      params.require(:tenant).permit(:name, :plan, :logo)
     end
 end
