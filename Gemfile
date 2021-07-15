@@ -29,3 +29,4 @@ gem 'devise_invitable', '~> 2.0.0'
 gem 'acts_as_tenant'
 gem 'friendly_id'
 gem 'active_storage_validations' #tenant logo
+gem "aws-sdk-s3", require: false
