@@ -16,6 +16,7 @@
         <th>Tenants</th>
         <th>current_tenant</th>
         <th>members_count</th>
+        <th>Confirmed</th>
       </tr>
     </thead>
     <tbody>
@@ -35,6 +36,9 @@
           </td>
           <td>
             <%= user.members_count %>
+          </td>
+          <td>
+            <%= user.confirmed_at.present? %>
           </td>
         </tr>
       <% end %>
